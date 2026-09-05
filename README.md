@@ -1,4 +1,6 @@
-Incident Lifecycle Automation in ServiceNow
+🚨 Incident Lifecycle Automation in ServiceNow
+
+End-to-end IT Service Management (ITSM) project demonstrating a complete Incident Management lifecycle in ServiceNow.
 
 📌 Project Overview
 
@@ -30,17 +32,31 @@ Perform final testing and validation of the complete workflow.
 
 🏗️ Project Lifecycle
 
-The project is organized into the following five documentation stages:
+The project is organized into five documentation stages:
 
-Ideation Phase – Identifies the problem, proposed solution, objectives, and scope.
+Phase
 
-Requirements Analysis Phase – Defines functional requirements, non-functional requirements, and acceptance criteria.
+Description
 
-Project Design Phase – Defines the workflow, record relationships, data requirements, users, teams, and validation points.
+1. Ideation
 
-Project Planning Phase – Defines implementation sequence, resources, risks, deliverables, and execution strategy.
+Identifies the problem, proposed solution, objectives, and scope.
 
-Project Development Phase – Implements and validates the complete ServiceNow incident lifecycle.
+2. Requirements Analysis
+
+Defines functional requirements, non-functional requirements, and acceptance criteria.
+
+3. Project Design
+
+Defines workflow, record relationships, data requirements, users, teams, and validation points.
+
+4. Project Planning
+
+Defines implementation sequence, resources, risks, deliverables, and execution strategy.
+
+5. Project Development
+
+Implements and validates the complete ServiceNow incident lifecycle.
 
 🔄 ServiceNow Implementation Phases
 
@@ -54,11 +70,7 @@ Configured the required service and service offering used by the incident scenar
 
 Phase 3 – Incident Record Creation
 
-Created an incident for:
-
-Unable to connect to Corporate VPN
-
-Relevant incident information such as caller, service, configuration item, service offering, and description was maintained.
+Created an incident for Unable to connect to Corporate VPN and maintained relevant incident information such as caller, service, configuration item, service offering, and description.
 
 Phase 4 – Incident Classification
 
@@ -66,157 +78,59 @@ Classified the incident using appropriate impact, urgency, priority, and categor
 
 Phase 5 – Knowledge Integration
 
-Used Agent Assist to search for relevant Knowledge Articles.
-
-The process included:
-
-Searching for relevant knowledge.
-
-Reviewing suggested articles.
-
-Marking an article as helpful.
-
-Attaching the article to the incident.
-
-Adding a comment related to the resolution.
-
-Verifying the article in the Activity/related information.
+Used Agent Assist to search for relevant Knowledge Articles, review suggested articles, mark an article as helpful, attach it to the incident, add a resolution comment, and verify the article in the Activity/related information.
 
 Phase 6 – Reassignment & Escalation
 
-Updated the assignment group to the appropriate support team.
-
-The project demonstrates:
-
-Watch List update.
-
-Work Notes List update.
-
-Assignment group change.
-
-Automatic assignment verification.
-
-Escalation for further technical resolution.
+Updated the Watch List and Work Notes List, changed the assignment group, verified automatic assignment behavior, and escalated the incident for further technical resolution.
 
 Phase 7 – Incident Tracking by Level 2
 
-The incident was investigated by the Network/Level 2 support team.
-
-Validation included:
-
-Incident description visibility.
-
-Knowledge article visibility.
-
-SLA information in Related Records.
-
-Correct assignment to the Level 2 support process.
+The incident was investigated by the Network/Level 2 support team. Validation included incident description, knowledge article visibility, SLA information, and correct Level 2 assignment.
 
 Phase 8 – Emergency Change Request Creation
 
-Created an emergency change for the technical change required to resolve the incident.
-
-The scenario included:
-
-Updating the Configuration Item from ThickStation to PowerEdge.
-
-Returning to the incident.
-
-Setting the incident state to On Hold.
-
-Setting On Hold Reason = Awaiting Change.
-
-Linking the change request with the incident.
+Created an emergency change for the technical change required to resolve the incident. The scenario included updating the Configuration Item from ThickStation to PowerEdge, setting the incident to On Hold, setting On Hold Reason = Awaiting Change, and linking the change request.
 
 Phase 9 – Child Incident Creation
 
-Created a child incident from the parent incident through Related Records → Child Incidents.
-
-Example:
-
-Short Description: Unable to connect to Corporate VPN
-
-Description: User receiving VPN authentication failure error
-
-Linked to the parent incident.
-
-Child incident number recorded for tracking.
+Created a child incident from Related Records → Child Incidents, linked it to the parent incident, and recorded its incident number for tracking.
 
 Phase 10 – Incident Resolution
 
-Captured the root cause and resolution details.
+Captured the probable cause and resolution details.
 
-Probable Cause:
+Probable Cause: PowerEdge service was suspended and required restart.
 
-PowerEdge service was suspended and required restart.
+Resolution Code: Workaround provided.
 
-Resolution Code:
+Resolution Notes: Restarted VPN-SRV-02 service as per emergency change request.
 
-Workaround provided
-
-Resolution Notes:
-
-Restarted VPN-SRV-02 service as per emergency change request.
-
-The incident was then resolved after saving the resolution information.
+The incident was then resolved.
 
 Phase 11 – Knowledge Creation
 
-Created a new Knowledge Article based on the resolved incident.
-
-The process included:
-
-Selecting Create Knowledge.
-
-Selecting IT as the Knowledge Base.
-
-Selecting the Standard article template.
-
-Verifying article details.
-
-Saving the article.
-
-Returning to the parent record.
-
-Verifying the created knowledge record in Related Records.
+Created a new Knowledge Article from the resolved incident by selecting IT as the Knowledge Base and the Standard article template, then verifying it in Related Records.
 
 Phase 12 – Final Validation
 
-Verified the complete lifecycle and related records.
+Verified:
 
-Validation included:
+Parent incident state = Resolved
 
-Parent incident state = Resolved.
+Child incident state = Resolved
 
-Child incident state = Resolved.
+Resolution activity triggered by the parent
 
-Resolution activity triggered by the parent.
+Change request linked
 
-Change request linked.
+Knowledge article created
 
-Knowledge article created.
-
-SLA tracking visible.
+SLA tracking visible
 
 Phase 13 – Testing & Deployment Validation
 
-Performed end-to-end validation of:
-
-Incident lifecycle.
-
-Escalation process.
-
-Change integration.
-
-Knowledge creation.
-
-Child incident management.
-
-SLA tracking.
-
-Multi-team collaboration.
-
-Overall system workflow.
+Performed end-to-end validation of the incident lifecycle, escalation process, change integration, knowledge creation, child incident management, SLA tracking, multi-team collaboration, and overall workflow.
 
 Phase 14 – Conclusion
 
@@ -291,8 +205,6 @@ Conclusion
 Incident
 
 Unable to connect to Corporate VPN
-
-Business/Technical Context
 
 A user is unable to connect to the corporate VPN and receives a VPN authentication/connectivity failure. The incident is investigated by support teams and routed to the Network/Level 2 team.
 
@@ -416,33 +328,45 @@ Change Management
 
 SLA Management
 
-📂 Recommended GitHub Repository Structure
+📂 Repository Structure
 
 Incident-Lifecycle-Automation-ServiceNow/
 │
 ├── README.md
-│
 ├── Documentation/
-│   ├── 01_Ideation_Phase_Incident_Lifecycle_Automation.docx
-│   ├── 02_Project_Requirements_Analysis.docx
-│   ├── 03_Project_Design_Phase.docx
-│   ├── 04_Project_Planning_Phase.docx
-│   ├── 05_Project_Development_Phase.docx
-│   └── Final_Project_Documentation_Incident_Lifecycle_Automation_ServiceNow.docx
-│
-├── Screenshots/
+├── ScreenShots/
+│   ├── Task 1.png
+│   ├── Task 2.png
+│   ├── Task 3.png
+│   └── ...
 └── Demo/
-    └── project-demo-link
+    └── Demo-Link.md
+
+🎥 Project Demo
+
+The complete ServiceNow project demonstration is available on Google Drive.
+
+👉 🎬 View Project Demo on Google Drive
+
+Access: Set the Google Drive file to Anyone with the link → Viewer so reviewers can watch the demo.
 
 📚 Documentation
 
-The repository should contain the five individual phase documents as well as the complete final project documentation.
+The repository contains documentation covering the five major stages:
 
-The Final Project Documentation provides the consolidated explanation of the complete project.
+Ideation Phase
+
+Requirements Analysis Phase
+
+Project Design Phase
+
+Project Planning Phase
+
+Project Development Phase
+
+The complete documentation provides a consolidated explanation of the ServiceNow Incident Lifecycle Automation project.
 
 🚀 Future Enhancements
-
-Possible future improvements include:
 
 Automated incident notifications.
 
